@@ -1,11 +1,10 @@
 #!/bin/bash
 
-PROJECT=$PROJECT
 ORGANIZATION=$ORGANIZATION
 REG_TOKEN=$REG_TOKEN
 
 cd /home/docker/actions-runner
-./config.sh --url https://github.com/${ORGANIZATION}/${PROJECT} --token ${REG_TOKEN}
+./config.sh --url https://github.com/${ORGANIZATION} --token ${REG_TOKEN}
 
 cleanup() {
     echo "Removing runner..."
